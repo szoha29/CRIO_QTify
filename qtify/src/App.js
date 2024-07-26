@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar'; 
 import Hero from './Hero/Hero'; 
-import Section from './Section/Section';
+import { App as Section} from './Section/Section';
 
 function App() {
   return (

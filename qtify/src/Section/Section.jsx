@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button, Typography, Grid, Collapse } from '@mui/material';
-import AlbumCard from '../AlbumCard/AlbumCard'; // Ensure AlbumCard component accepts props for dynamic data
+import AlbumCard from '../AlbumCard/AlbumCard';
 
-const Section = () => {
+const Section = ({ title, apiEndpoint }) => {
     const [albums, setAlbums] = useState([]);
     const [collapsed, setCollapsed] = useState(false);
 
     useEffect(() => {
         const fetchAlbums = async () => {
             try {
-                const response = await axios.get('https://qtify-backend-labs.crio.do/albums/top');
+                const response = await axios.get(apiEndpoint);
                 setAlbums(response.data); // Adjust based on the actual structure of the response
             } catch (error) {
                 console.error('Error fetching albums:', error);
@@ -18,12 +18,12 @@ const Section = () => {
         };
 
         fetchAlbums();
-    }, []);
+    }, [apiEndpoint]);
 
     return (
         <div style={{ padding: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <Typography variant="h4">Top Albums</Typography>
+                <Typography variant="h4">{title}</Typography>
                 <Button variant="contained" onClick={() => setCollapsed(!collapsed)}>
                     {collapsed ? 'Expand' : 'Collapse'}
                 </Button>
@@ -46,4 +46,13 @@ const Section = () => {
     );
 };
 
-export default Section;
+const App = () => {
+    return (
+        <div>
+            <Section title="Top Albums" apiEndpoint="https://qtify-backend-labs.crio.do/albums/top" />
+            <Section title="New Albums" apiEndpoint="https://qtify-backend-labs.crio.do/albums/new" />
+        </div>
+    );
+};
+
+export default App;
