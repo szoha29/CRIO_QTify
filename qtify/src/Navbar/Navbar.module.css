@@ -1,3 +1,7 @@
+:root {
+  --color-primary: #34C94B; /* Set your primary color here */
+}
+
 .navbar {
     background-color: var(--color-primary);
     height: 74px;
