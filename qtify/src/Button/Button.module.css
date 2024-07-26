@@ -1,0 +1,20 @@
+:root {
+    --button-background-color: #000000; /* Replace with the actual black color code from the Figma file */
+    --button-text-color: #00FF00; /* Replace with the actual green color code from the Figma file */
+  }
+  
+  .button {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Adjust the value as needed */
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: var(--button-text-color); /* Optionally, you can define a different color for hover state */
+    color: var(--button-background-color); /* Optionally, you can define a different color for hover state */
+  }
+  
