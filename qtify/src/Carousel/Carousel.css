@@ -2,6 +2,11 @@
     position: relative;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
 .nav-button {
     position: absolute;
     top: 50%;
@@ -18,12 +23,12 @@
     z-index: 10;
 }
 
-.swiper-button-prev {
-    left: 10px;
+.left-nav-button {
+    left: -24px;
 }
 
-.swiper-button-next {
-    right: 10px;
+.right-nav-button {
+    right: -24px;
 }
 
 .nav-button svg {
