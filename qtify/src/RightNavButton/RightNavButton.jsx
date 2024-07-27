@@ -5,7 +5,7 @@ import "../Carousel/Carousel.css";
 const RightNavButton = () => {
   const swiper = useSwiper();
   return (
-    <button onClick={() => swiper.slideNext()} className="right-nav-button">
+    <button onClick={() => swiper.slideNext()} className="swiper-button-next">
       <svg
         width="32"
         height="32"
