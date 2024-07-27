@@ -1,0 +1,20 @@
+.carousel-container {
+    position: relative;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:first-of-type {
+    left: 10px; 
+}
+
+.nav-button:last-of-type {
+    right: 10px; 
+}
