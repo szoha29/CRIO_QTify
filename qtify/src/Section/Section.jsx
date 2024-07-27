@@ -1,7 +1,7 @@
 // Section.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button, Typography, Collapse } from '@mui/material';
+import { Button, Typography, Collapse, Grid } from '@mui/material';
 import AlbumCard from '../AlbumCard/AlbumCard';
 import Carousel from '../Carousel/Carousel';
 
@@ -40,9 +40,13 @@ const Section = ({ title, apiEndpoint }) => {
                     {collapsed ? 'Show All' : 'Collapse'}
                 </Button>
             </div>
-            <Collapse in={!collapsed}>
+            {collapsed ? (
                 <Carousel items={albumCards} />
-            </Collapse>
+            ) : (
+                <Grid container spacing={2}>
+                    {albumCards}
+                </Grid>
+            )}
         </div>
     );
 };
