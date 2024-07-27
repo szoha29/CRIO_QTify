@@ -6,7 +6,7 @@ import '../Carousel/Carousel.css';
 const RightNavButton = () => {
     const swiper = useSwiper();
     return (
-        <button onClick={() => swiper.slideNext()} className="nav-button right-nav-button">
+        <button onClick={() => swiper.slideNext()} className="right-nav-button">
            <RightNavIcon />
         </button>
     );
