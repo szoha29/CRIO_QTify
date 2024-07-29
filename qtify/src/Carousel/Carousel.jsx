@@ -14,8 +14,8 @@ const Carousel = ({ items }) => {
         spaceBetween={20}
         slidesPerView={"auto"}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".right-nav-button",
+          prevEl: ".left-nav-button",
         }}
         breakpoints={{
           640: {
@@ -29,8 +29,8 @@ const Carousel = ({ items }) => {
           },
         }}
       >
-        {items.map((item) => (
-          <SwiperSlide key={item.id}>{item.content}</SwiperSlide>
+        {items.map((item, index) => (
+          <SwiperSlide key={index}>{item}</SwiperSlide>
         ))}
       </Swiper>
       <LeftNavButton />
