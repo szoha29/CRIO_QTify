@@ -1,12 +1,10 @@
 import React from "react";
 import "../Carousel/Carousel.css";
-import { useSwiperSlide } from "swiper/react";
 
-const RightNavButton = () => {
-  const swiper = useSwiperSlide();
+const RightNavButton = ({ swiperRef }) => {
   return (
     <button
-      onClick={() => swiper.slideNext()}
+      onClick={() => swiperRef.current?.slideNext()}
       className="right-nav-button"
       aria-label="Next"
     >
