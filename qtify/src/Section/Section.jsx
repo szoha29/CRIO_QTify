@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Button, Typography, Grid } from '@mui/material';
 import AlbumCard from '../AlbumCard/AlbumCard';
 import Carousel from '../Carousel/Carousel';
-import SongsSection from './SongsSection/SongsSection';
+import SongsSection from '../SongsSection/SongsSection';
 
 const Section = ({ title, apiEndpoint, showCollapseButton = true, isSongsSection = false }) => {
     const [items, setItems] = useState([]);
