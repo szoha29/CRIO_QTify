@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Tabs, Tab, Typography, Box } from "@mui/material";
+import { Tabs, Tab, Typography } from "@mui/material";
 import Section from "../Section/Section";
 
 const SongsSection = () => {
