@@ -1,13 +1,12 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation } from "swiper";
 import "swiper/swiper-bundle.css";
 import "./Carousel.css";
 import LeftNavButton from "../LeftNavButton/LeftNavButton";
 import RightNavButton from "../RightNavButton/RightNavButton";
 
 const Carousel = ({ items }) => {
-  //Added useRef to use in Right Nav Button
   const swiperRef = useRef(null);
 
   return (
@@ -16,10 +15,7 @@ const Carousel = ({ items }) => {
         modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={"auto"}
-        navigation={{
-          nextEl: ".right-nav-button",
-          prevEl: ".left-nav-button",
-        }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -31,13 +27,12 @@ const Carousel = ({ items }) => {
             slidesPerView: 4,
           },
         }}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>{item}</SwiperSlide>
         ))}
       </Swiper>
-      <LeftNavButton />
+      <LeftNavButton swiperRef={swiperRef} />
       <RightNavButton swiperRef={swiperRef} />
     </div>
   );

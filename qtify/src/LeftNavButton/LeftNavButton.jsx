@@ -1,11 +1,9 @@
 import React from "react";
-import { useSwiper } from "swiper/react";
 import "../Carousel/Carousel.css";
 
-const LeftNavButton = () => {
-  const swiper = useSwiper();
+const LeftNavButton = ({ swiperRef }) => {
   return (
-    <button onClick={() => swiper.slidePrev()} className="left-nav-button">
+    <button onClick={() => swiperRef.current?.slidePrev()} className="left-nav-button">
       <svg
         width="32"
         height="32"
