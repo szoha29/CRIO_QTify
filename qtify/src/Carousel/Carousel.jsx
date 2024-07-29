@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules/navigation'; // Corrected import for Navigation
 import LeftNavButton from "../LeftNavButton/LeftNavButton";
 import RightNavButton from "../RightNavButton/RightNavButton";
-import "../Carousel/Carousel.css"; // Ensure styles are imported correctly
+import "../Carousel/Carousel.css";
 
 const Carousel = ({ items }) => {
   const swiperRef = useRef(null);
