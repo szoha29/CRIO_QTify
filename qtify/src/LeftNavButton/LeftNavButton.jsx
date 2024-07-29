@@ -6,6 +6,7 @@ const LeftNavButton = ({ swiperRef }) => {
     <button
       onClick={() => swiperRef.current?.slidePrev()}
       className="left-nav-button"
+      aria-label="Previous"
     >
       <svg
         width="32"
