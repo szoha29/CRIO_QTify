@@ -14,8 +14,8 @@ const Carousel = ({ items }) => {
         spaceBetween={20}
         slidesPerView={"auto"}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".right-nav-button",
+          prevEl: ".left-nav-button",
         }}
         breakpoints={{
           640: {
