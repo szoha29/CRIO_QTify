@@ -1,3 +1,7 @@
+/* Import Swiper styles */
+@import "swiper/css";
+@import "swiper/css/navigation";
+
 .carousel-container {
     position: relative;
 }

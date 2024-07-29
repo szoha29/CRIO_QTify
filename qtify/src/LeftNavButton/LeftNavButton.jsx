@@ -3,7 +3,10 @@ import "../Carousel/Carousel.css";
 
 const LeftNavButton = ({ swiperRef }) => {
   return (
-    <button onClick={() => swiperRef.current?.slidePrev()} className="left-nav-button">
+    <button
+      onClick={() => swiperRef.current?.slidePrev()}
+      className="left-nav-button"
+    >
       <svg
         width="32"
         height="32"

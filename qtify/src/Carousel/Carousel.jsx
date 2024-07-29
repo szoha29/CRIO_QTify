@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/navigation';
 import { Navigation } from "swiper";
-import "swiper/swiper-bundle.css";
-import "./Carousel.css";
 import LeftNavButton from "../LeftNavButton/LeftNavButton";
 import RightNavButton from "../RightNavButton/RightNavButton";
 
@@ -16,6 +16,10 @@ const Carousel = ({ items }) => {
         spaceBetween={20}
         slidesPerView={"auto"}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
+        navigation={{
+          nextEl: ".right-nav-button",
+          prevEl: ".left-nav-button",
+        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
