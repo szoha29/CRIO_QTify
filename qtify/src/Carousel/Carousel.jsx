@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules/navigation'; // Corrected import for Navigation
+import { Navigation } from 'swiper'; // Corrected import for Navigation
 import LeftNavButton from "../LeftNavButton/LeftNavButton";
 import RightNavButton from "../RightNavButton/RightNavButton";
 import "../Carousel/Carousel.css";
